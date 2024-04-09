@@ -1,0 +1,616 @@
+{
+	"info": {
+		"_postman_id": "4729763b-dfb9-458f-a62c-e0d975f95dcb",
+		"name": "Tara Task Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15325900"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "section",
+					"item": [
+						{
+							"name": "Create Section",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "a2tNUGtmv9PERvg0GeBTQnH1y2rlX5V0jM4RYwVdLxNiakYsj8ysRmPa4ystziJ9OC9WwoGPp40fZ25C3DFNTEQpH9RYHUCVvow8Y8pc9x23wPLgNMWo0UDhslJKQ4Pd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sectionName\": \"Section One\",\n    \"status\": \"draft\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/admin/section/create_section",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"admin",
+										"section",
+										"create_section"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Sections",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "a2tNUGtmv9PERvg0GeBTQnH1y2rlX5V0jM4RYwVdLxNiakYsj8ysRmPa4ystziJ9OC9WwoGPp40fZ25C3DFNTEQpH9RYHUCVvow8Y8pc9x23wPLgNMWo0UDhslJKQ4Pd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"skipNumber\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/admin/section/get_sections",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"admin",
+										"section",
+										"get_sections"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Section",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "a2tNUGtmv9PERvg0GeBTQnH1y2rlX5V0jM4RYwVdLxNiakYsj8ysRmPa4ystziJ9OC9WwoGPp40fZ25C3DFNTEQpH9RYHUCVvow8Y8pc9x23wPLgNMWo0UDhslJKQ4Pd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sectionId\": 1,\n    \"sectionName\": \"Edited Section\",\n    \"status\": \"public\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/admin/section/update_section",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"admin",
+										"section",
+										"update_section"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Section",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "a2tNUGtmv9PERvg0GeBTQnH1y2rlX5V0jM4RYwVdLxNiakYsj8ysRmPa4ystziJ9OC9WwoGPp40fZ25C3DFNTEQpH9RYHUCVvow8Y8pc9x23wPLgNMWo0UDhslJKQ4Pd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sectionId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/admin/section/delete_section",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"admin",
+										"section",
+										"delete_section"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "topic",
+					"item": [
+						{
+							"name": "Create Topic",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "a2tNUGtmv9PERvg0GeBTQnH1y2rlX5V0jM4RYwVdLxNiakYsj8ysRmPa4ystziJ9OC9WwoGPp40fZ25C3DFNTEQpH9RYHUCVvow8Y8pc9x23wPLgNMWo0UDhslJKQ4Pd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"topicName\": \"Topic One\",\n    \"sectionId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/admin/topic/create_topic",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"admin",
+										"topic",
+										"create_topic"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Topics",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "a2tNUGtmv9PERvg0GeBTQnH1y2rlX5V0jM4RYwVdLxNiakYsj8ysRmPa4ystziJ9OC9WwoGPp40fZ25C3DFNTEQpH9RYHUCVvow8Y8pc9x23wPLgNMWo0UDhslJKQ4Pd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"skipNumber\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/admin/topic/get_topics",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"admin",
+										"topic",
+										"get_topics"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Topic Sections",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "a2tNUGtmv9PERvg0GeBTQnH1y2rlX5V0jM4RYwVdLxNiakYsj8ysRmPa4ystziJ9OC9WwoGPp40fZ25C3DFNTEQpH9RYHUCVvow8Y8pc9x23wPLgNMWo0UDhslJKQ4Pd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sectionId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/admin/topic/get_topic_sections",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"admin",
+										"topic",
+										"get_topic_sections"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Topics",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "a2tNUGtmv9PERvg0GeBTQnH1y2rlX5V0jM4RYwVdLxNiakYsj8ysRmPa4ystziJ9OC9WwoGPp40fZ25C3DFNTEQpH9RYHUCVvow8Y8pc9x23wPLgNMWo0UDhslJKQ4Pd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"topicId\": 1,\n    \"topicName\": \"Edited Topic\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/admin/topic/update_topic",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"admin",
+										"topic",
+										"update_topic"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Topic",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "a2tNUGtmv9PERvg0GeBTQnH1y2rlX5V0jM4RYwVdLxNiakYsj8ysRmPa4ystziJ9OC9WwoGPp40fZ25C3DFNTEQpH9RYHUCVvow8Y8pc9x23wPLgNMWo0UDhslJKQ4Pd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"topicId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/admin/topic/delete_topic",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"admin",
+										"topic",
+										"delete_topic"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Question & Answer",
+					"item": [
+						{
+							"name": "Create Question Answer",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "a2tNUGtmv9PERvg0GeBTQnH1y2rlX5V0jM4RYwVdLxNiakYsj8ysRmPa4ystziJ9OC9WwoGPp40fZ25C3DFNTEQpH9RYHUCVvow8Y8pc9x23wPLgNMWo0UDhslJKQ4Pd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"questionText\": \"Question One\",\n    \"topicId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/admin/questionAnswer/create_question_answer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"admin",
+										"questionAnswer",
+										"create_question_answer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Question Based On Topic",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "a2tNUGtmv9PERvg0GeBTQnH1y2rlX5V0jM4RYwVdLxNiakYsj8ysRmPa4ystziJ9OC9WwoGPp40fZ25C3DFNTEQpH9RYHUCVvow8Y8pc9x23wPLgNMWo0UDhslJKQ4Pd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"topicId\": 1,\n    \"skipNumber\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/admin/questionAnswer/get_question_answers_based_on_topic",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"admin",
+										"questionAnswer",
+										"get_question_answers_based_on_topic"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Question Answer",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "a2tNUGtmv9PERvg0GeBTQnH1y2rlX5V0jM4RYwVdLxNiakYsj8ysRmPa4ystziJ9OC9WwoGPp40fZ25C3DFNTEQpH9RYHUCVvow8Y8pc9x23wPLgNMWo0UDhslJKQ4Pd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"questionId\": 1,\n    \"topicId\": 1,\n    \"questionText\": \"edited text\",\n    \"viewCount\": 2,\n    \"liked\": true,\n    \"status\": \"public\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/admin/questionAnswer/update_question_answer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"admin",
+										"questionAnswer",
+										"update_question_answer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Question Answer",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "a2tNUGtmv9PERvg0GeBTQnH1y2rlX5V0jM4RYwVdLxNiakYsj8ysRmPa4ystziJ9OC9WwoGPp40fZ25C3DFNTEQpH9RYHUCVvow8Y8pc9x23wPLgNMWo0UDhslJKQ4Pd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"questionId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/admin/questionAnswer/delete_question_answers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"admin",
+										"questionAnswer",
+										"delete_question_answers"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Question & Answer",
+					"item": [
+						{
+							"name": "View Question Answer",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "0fZ25C3DFNTEQpH9RYHUCVvow8Y8pc9x23wPLgNMWo0UDhslJKa2tNUGtmv9PERvg0GeBTQnH1y2rlX5V0jM4RYwVdLxNiakYsj8ysRmPa4ystziJ9O",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"skipNumber\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/user/questionAnswer/view_question_answers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"questionAnswer",
+										"view_question_answers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search Question Answer",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "0fZ25C3DFNTEQpH9RYHUCVvow8Y8pc9x23wPLgNMWo0UDhslJKa2tNUGtmv9PERvg0GeBTQnH1y2rlX5V0jM4RYwVdLxNiakYsj8ysRmPa4ystziJ9O",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"skipNumber\": 0,\n    \"questionText\": \"Search TEXT\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/user/questionAnswer/search_question_answers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"questionAnswer",
+										"search_question_answers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search Question Answer Copy",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "0fZ25C3DFNTEQpH9RYHUCVvow8Y8pc9x23wPLgNMWo0UDhslJKa2tNUGtmv9PERvg0GeBTQnH1y2rlX5V0jM4RYwVdLxNiakYsj8ysRmPa4ystziJ9O",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"skipNumber\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/user/questionAnswer/popular_question_answers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"questionAnswer",
+										"popular_question_answers"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
