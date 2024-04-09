@@ -19,23 +19,6 @@ const Topic = sequelize.define('Topic', {
     }
 });
 
-const SectionTopic = sequelize.define('SectionTopic', {
-  SectionId: {
-    type: DataTypes.INTEGER,
-    references: {
-      model: Section,
-      key: 'id'
-    }
-  },
-  TopicId: {
-    type: DataTypes.INTEGER,
-    references: {
-      model: Topic,
-      key: 'id'
-    }
-  }
-});
-
 
 const QuestionAnswer = sequelize.define('QuestionAnswer', {
     questionText: {
@@ -48,6 +31,7 @@ const QuestionAnswer = sequelize.define('QuestionAnswer', {
     },
     liked: {
       type: DataTypes.BOOLEAN,
+      allowNull: true
     },
     status: {
       type: DataTypes.ENUM('draft', 'public'),
@@ -56,8 +40,8 @@ const QuestionAnswer = sequelize.define('QuestionAnswer', {
 });
 
 
-Section.belongsToMany(Topic, { through: 'SectionTopic' });
-Topic.belongsToMany(Section, { through: 'SectionTopic' });
+Section.hasMany(Topic);
+Topic.belongsTo(Section);
 
 Topic.hasMany(QuestionAnswer);
 QuestionAnswer.belongsTo(Topic)
@@ -73,6 +57,5 @@ sequelize.sync({force: false})
 module.exports = {
     Section,
     Topic,
-    QuestionAnswer,
-    SectionTopic
+    QuestionAnswer
 }
