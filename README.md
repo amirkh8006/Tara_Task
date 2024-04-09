@@ -1,7 +1,7 @@
 **Project Steps**
 ----
 
-* **Data Base**
+* **DataBase**
 
   Create database user and database name based on config file.
 
