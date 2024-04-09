@@ -5,12 +5,14 @@
 
   Create database user and database name based on config file.
 
-* **Run:**
+* **Run:** <br />
 
-  `Node server.js`
+    **Install Packages:**   `npm i --save`
+
+    **Run Project:**  `Node server.js`
   
   
-* **API EndPoints:**
+* **API Routes:**
   
 
   Download postman_collection.json file from project root and import it on your postman.
